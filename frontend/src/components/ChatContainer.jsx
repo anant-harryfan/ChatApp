@@ -75,7 +75,7 @@ const ChatContainer = () => {
                   className="sm:max-w-[200px] rounded-md mb-2"
                 />
               )}
-              {message.text &&  <p dangerouslySetInnerHTML={{ __html: message.text }} ></p> }
+              {message.text &&  <p>{message.text}</p> }
             </div>
           </div>
         ))}

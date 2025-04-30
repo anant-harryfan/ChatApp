@@ -1,7 +1,6 @@
-import { X } from "lucide-react";
 import { useAuthStore } from "../store/useAuthStore";
 import { useChatStore } from "../store/useChatStore";
-
+import { Users } from "lucide-react";
 const ChatHeader = () => {
   const { selectedUser, setSelectedUser } = useChatStore();
   const { onlineUsers } = useAuthStore();
@@ -27,8 +26,11 @@ const ChatHeader = () => {
         </div>
 
         {/* Close button */}
-        <button onClick={() => setSelectedUser(null)}>
-          <X />
+        <button style={{display: "none"}} id="DusA" onClick={() => {
+          document.getElementById('asi').style.display="flex"
+          document.getElementById('DusA').style.display="none"
+          }}>
+        <Users className="size-6" /> 
         </button>
       </div>
     </div>
